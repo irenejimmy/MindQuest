@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='profile.css') }}">
+</head>
+<body>
+
+<div class="profile">
+
+    <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=User" class="avatar">
+
+    <h1>{{ username }}</h1>
+
+    <p>🌟 Wellness Explorer</p>
+
+    <div class="stats">
+
+        <div class="box">
+            <h2>⭐</h2>
+            <h3>{{ xp }}</h3>
+            <p>Total XP</p>
+        </div>
+
+        <div class="box">
+            <h2>🏆</h2>
+            <h3>{{ level }}</h3>
+            <p>Level</p>
+        </div>
+
+        <div class="box">
+            <h2>🔥</h2>
+            <h3>{{ streak }}</h3>
+            <p>Day Streak</p>
+        </div>
+
+    </div>
+
+    <div class="history">
+
+        <h2>📅 Mood History</h2>
+
+        <table>
+
+            <tr>
+                <th>Date</th>
+                <th>Mood</th>
+            </tr>
+
+            {% for mood in moods %}
+
+            <tr>
+
+                <td>{{ mood.date }}</td>
+
+                <td>{{ mood.mood }}</td>
+
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+    <div class="badges">
+
+        <h2>🏅 Badges</h2>
+
+        <span>😊 Happy Hero</span>
+
+        <span>🌸 Calm Master</span>
+
+        <span>🔥 7-Day Streak</span>
+
+        <span>⭐ Mood Explorer</span>
+
+    </div>
+
+</div>
+<nav>
+
+<div class="logo">
+
+🧠 MindQuest
+
+</div>
+
+<div class="nav-right">
+
+<a href="/dashboard">
+
+🏠 Dashboard
+
+</a>
+
+<a href="/">
+
+🚪 Logout
+
+</a>
+
+</div>
+
+</nav>
+
+</body>
+</html>

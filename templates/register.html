@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Register</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='login.css') }}">
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h1>Create Account</h1>
+
+<form action="/dashboard">
+
+<input
+type="text"
+placeholder="Username"
+required>
+
+<input
+type="email"
+placeholder="Email"
+required>
+
+<input
+type="password"
+placeholder="Password"
+required>
+
+<button>
+
+Register
+
+</button>
+
+</form>
+
+</div>
+
+</body>
+
+</html>

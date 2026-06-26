@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<title>MindQuest</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='result.css') }}">
+
+</head>
+
+<body>
+<nav>
+
+<div class="logo">
+
+🧠 MindQuest
+
+</div>
+
+<div class="nav-right">
+
+<a href="/dashboard">
+
+🏠 Dashboard
+
+</a>
+
+<a href="/profile">
+
+👤 My Profile
+
+</a>
+
+<a href="/">
+
+🚪 Logout
+
+</a>
+
+</div>
+
+</nav>
+<div class="card">
+
+{% if mood=="Happy" %}
+
+<div class="emoji">😄</div>
+
+<h1>LEVEL COMPLETED!</h1>
+
+<h2>You are Happy!</h2>
+
+<div class="xp">
+
+Level 5 ⭐
+
+<div class="progress">
+
+<div class="bar" style="width:90%;"></div>
+
+</div>
+
+90% to Level 6
+
+</div>
+
+<div class="missions">
+
+<h3>🎯 Today's Missions</h3>
+
+<ul>
+
+<li>😊 Smile at 5 people</li>
+
+<li>🎵 Listen to your favorite song</li>
+
+<li>🌞 Go outside for 20 minutes</li>
+
+<li>💧 Drink 2L of water</li>
+
+<li>❤️ Tell someone you appreciate them</li>
+
+</ul>
+
+</div>
+
+<div class="reward">
+
+🏆 Badge Earned
+
+Happy Hero
+
++150 XP
+
+</div>
+
+<div class="quote">
+
+"Happiness grows when you share it."
+
+</div>
+
+{% elif mood=="Sad" %}
+
+<div class="emoji">💙</div>
+
+<h1>Healing Mode</h1>
+
+<h2>It's okay to have difficult days.</h2>
+
+<div class="missions">
+
+<h3>🌸 Healing Challenges</h3>
+
+<ul>
+
+<li>🚶 Walk for 15 minutes</li>
+
+<li>🧘 Meditation</li>
+
+<li>🎵 Listen to calm music</li>
+
+<li>📖 Write 3 good things today</li>
+
+<li>📞 Talk to someone you trust</li>
+
+</ul>
+
+</div>
+
+<div class="reward">
+
+⭐ Calm Badge
+
++100 XP
+
+</div>
+
+<div class="quote">
+
+"You survived every hard day so far."
+
+</div>
+
+{% elif mood=="Stressed" %}
+
+<div class="emoji">😰</div>
+
+<h1>Stress Relief Mission</h1>
+
+<div class="missions">
+
+<ul>
+
+<li>🌬 5 Deep Breaths</li>
+
+<li>☕ Drink Water</li>
+
+<li>📵 Stay away from phone for 20 mins</li>
+
+<li>🎧 Listen to nature sounds</li>
+
+<li>🚶 Walk outside</li>
+
+</ul>
+
+</div>
+
+<div class="reward">
+
++120 Calm XP
+
+</div>
+
+{% elif mood=="Angry" %}
+
+<div class="emoji">😠</div>
+
+<h1>Cool Down Mission</h1>
+
+<div class="missions">
+
+<ul>
+
+<li>💧 Drink Water</li>
+
+<li>🎵 Calm Music</li>
+
+<li>🧘 Count to 20</li>
+
+<li>🚶 Walk Outside</li>
+
+<li>📝 Write your feelings</li>
+
+</ul>
+
+</div>
+
+<div class="reward">
+
+🔥 Self-Control Badge
+
+</div>
+
+{% else %}
+
+<div class="emoji">🙂</div>
+
+<h1>Balanced Mood</h1>
+
+<p>Keep taking care of yourself.</p>
+
+{% endif %}
+
+<a href="/dashboard">
+
+<button>
+
+Play Again 🎮
+
+</button>
+
+</a>
+
+</div>
+
+</body>
+
+</html>

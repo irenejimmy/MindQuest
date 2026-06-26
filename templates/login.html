@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>MindQuest Login</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='login.css') }}">
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h1>🧠 MindQuest</h1>
+
+<h2>Welcome Back</h2>
+
+<form action="/dashboard">
+
+<input
+type="text"
+placeholder="Username"
+required>
+
+<input
+type="password"
+placeholder="Password"
+required>
+
+<button>
+
+Login 🚀
+
+</button>
+
+</form>
+
+<p>
+
+Don't have an account?
+
+<a href="/register">
+
+Register
+
+</a>
+
+</p>
+
+</div>
+
+</body>
+
+</html>
